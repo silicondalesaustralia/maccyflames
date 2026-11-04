@@ -13,8 +13,14 @@ const description = 'Home of the Macclesfield Flames. Our new website is coming 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL('/logo.png', Astro.site)} />
-    <meta name="theme-color" content="#231f20" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500&display=swap"
+    />
     <link rel="canonical" href={Astro.site} />
   </head>
   <body>
@@ -31,9 +37,9 @@ const description = 'Home of the Macclesfield Flames. Our new website is coming 
   body {
     margin: 0;
     min-height: 100%;
-    background: #231f20;
+    background: #000;
     color: #fff;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   }
 </style>
 
@@ -54,14 +60,19 @@ const description = 'Home of the Macclesfield Flames. Our new website is coming 
   }
   h1 {
     margin: 1.5rem 0 0.5rem;
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    letter-spacing: 0.08em;
+    font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+    font-weight: 400;
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffd200;
   }
   p {
     margin: 0;
-    font-size: 1.125rem;
-    color: #f3f3f3;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #e6e6e6;
   }
 </style>
